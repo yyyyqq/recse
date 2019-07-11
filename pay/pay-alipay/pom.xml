@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.recse4cloud</groupId>
+        <artifactId>pay</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <groupId>com.recse4cloud.pay</groupId>
+    <artifactId>pay-alipay</artifactId>
+    <version>1.0.0</version>
+    <name>pay-alipay</name>
+    <description>支付宝支付</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <ali.sdk.version>3.7.26.ALL</ali.sdk.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.alipay.sdk</groupId>
+            <artifactId>alipay-sdk-java</artifactId>
+            <version>${ali.sdk.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.recse4cloud.pay</groupId>
+            <artifactId>pay-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

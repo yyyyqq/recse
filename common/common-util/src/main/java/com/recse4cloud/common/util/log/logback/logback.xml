@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds">
+    <property file="${user.home}/conf/logback.properties"/>
+    <!-- 定义参数 -->
+    <property name="app.name" value="jx-finance"/>
+    <!--spring-->
+    <!--<include resource="org/springframework/boot/logging/logback/base.xml"/>-->
+    <!--基础日志配置-->
+    <include resource="com/recse4cloud/common/util/log/logback/base-logback.xml"/>
+
+    <!--<logger name="java.sql" level="debug">-->
+    <!--<appender-ref ref="CONSOLE"/>-->
+    <!--</logger>-->
+
+    <!--写入数据库-->
+    <!--<include resource="com/fuse/tools/logback/database-logback.xml"/>-->
+</configuration>

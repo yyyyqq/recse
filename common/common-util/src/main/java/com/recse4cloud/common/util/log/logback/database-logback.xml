@@ -1,0 +1,31 @@
+<included>
+    <!--数据库-->
+    <appender name="DATA_BASE" class="ch.qos.logback.classic.db.DBAppender">
+        <connectionSource class="ch.qos.logback.core.db.DataSourceConnectionSource">
+            <dataSource class="${dataSource.class}">
+                <!--<driverClassName>com.mysql.jdbc.Driver</driverClassName>-->
+                <url>${dataSource.url}</url>
+                <username>${dataSource.user}</username>
+                <password>${dataSource.password}</password>
+            </dataSource>
+        </connectionSource>
+
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>${log.database.lever}</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+
+    </appender>
+    <!--异步写入数据库-->
+    <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <discardingThreshold>0</discardingThreshold>
+        <queueSize>10000</queueSize>
+        <appender-ref ref="DATA_BASE"/>
+    </appender>
+    <!-- 生产环境用info -->
+    <root level="${log.lever}">
+        <appender-ref ref="ASYNC"/>
+    </root>
+
+</included>
