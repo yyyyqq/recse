@@ -1,2 +1,3 @@
 # recse
-Recse is a base framework for microservice
+雷克赛项目是作为搭建基础框架，简化项目基础架构搭建，为后续微服务脚手架做铺垫。
+雷克塞主要包含了：数据连接配置，SpringCloud配置，支付配置，短信配置，SpringSecurity配置等。
