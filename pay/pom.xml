@@ -14,7 +14,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <xstream.version>1.4.7</xstream.version>
+        <xstream.version>1.4.19</xstream.version>
     </properties>
 
     <modules>
