@@ -12,7 +12,7 @@
     <artifactId>qrcode</artifactId>
     <properties>
         <zxing.version>3.4.0</zxing.version>
-        <poi.version>4.1.0</poi.version>
+        <poi.version>4.1.1</poi.version>
     </properties>
 
     <dependencies>
